@@ -24,7 +24,7 @@ def exploit(target):
         print e
 def main():
     if len(sys.argv)<3:
-        print 'python check_order.py.py -h target/-f target-file'
+        print 'python v6-45.py -h target/-f target-file'
     else:
         if sys.argv[1] == "-h":
             exploit(sys.argv[2])
