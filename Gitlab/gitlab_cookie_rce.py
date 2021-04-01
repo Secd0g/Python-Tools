@@ -6,7 +6,7 @@ import urllib3
 urllib3.disable_warnings()
 key = pbkdf2_hmac(
     hash_name = 'sha1', 
-    password = b"3231f54b33e0c1ce998113c083528460153b19542a70173b4458a21e845ffa33cc45ca7486fc8ebb6b2727cc02feea4c3adbe2cc7b65003510e4031e164137b3", 
+    password = b"3231f54b33e0c1ce998113c083528460153b19542a70173b4458a21e845ffa33cc45ca7486fc8ebb6b2727cc02feea4c3adbe2cc7b65003510e4031e164137b3", #secret_key_base
     salt = b"signed cookie", 
     iterations = 1000, 
     dklen = 64
